@@ -8,7 +8,7 @@ module.directive("kzHold", function($interval){
           var intervalPromise;
           var bindAction = function(){
               if(!intervalSet) {
-                  intervalPromise = $interval(action, 1000/(scope.frequency || 180));
+                  intervalPromise = $interval(action, 1000/(scope.kzHoldFrequency || 180));
                   intervalSet=true;
               }
           };
