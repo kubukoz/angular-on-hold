@@ -5,7 +5,7 @@ Mousedown interval event handler directive.
 
 Bower
 ```bash
-bower install kubukoz/angular-on-hold
+bower install angular-on-hold
 ```
 index.html
 ```html
