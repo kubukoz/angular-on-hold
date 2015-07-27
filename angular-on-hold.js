@@ -1,14 +1,14 @@
 var module = angular.module("kzHold", []);
 module.directive("kzHold", function($interval){
   return {
-      scope: {kzHold: "=", frequency: "="},
+      scope: {kzHold: "=", frequency: "=kzHoldFrequency"},
       link: function(scope, elem, attr){
           var action = scope.kzHold;
           var intervalSet;
           var intervalPromise;
           var bindAction = function(){
               if(!intervalSet) {
-                  intervalPromise = $interval(action, 1000/(scope.kzHoldFrequency || 180));
+                  intervalPromise = $interval(action, 1000/(scope.frequency || 180));
                   intervalSet=true;
               }
           };
